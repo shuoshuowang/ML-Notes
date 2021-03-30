@@ -1,0 +1,320 @@
+- One type of machine learning has gotten a lot of attention over the last few years
+ It's called reinforcement learning
+ Reinforcement learning is different from supervised, unsupervised, and semi-supervised learning
+ With each of these techniques, you're trying to invent the best model
+ You want to find a model that can most accurately classify different data sets or find meaningful clusters
+ Once you have the model, you can then let the machine work with the rest of the data
+ Reinforcement learning has the machine iterate to continuously improve the outcome
+ Over time, the machine should zero in like a heat-seeking missile and get closer and closer to high quality output
+ Reinforcement learning is very open ended
+ You're reinforcing certain ways that you want the machine to behave
+ Instead of leaving everything open to study and observation, you're giving the machine a very clear goal
+ Think of it this way
+ Back when I was younger, there was a simple video game called Pong
+ The game had two separate bars on the opposite sides of the screen
+ They would slide up and down as you tried to hit the ball to each side
+ In 2013, Google's Deep Mind project experimented with Pong to see if they could teach a computer how to play
+ They set up a series of rewards for the computer
+ Every time the computer hit the ball against the paddle, it got a reward
+ Then every time that the opponent missed the ball, it got another reward
+ Then it played against itself and tried to gather as many rewards as possible
+ It only took a short while for the computer to start to master the game and consistently beat human players
+ The Deep Mind team used something called Q-learning
+ This Q-learning helped with some of the more complicated games that needed more sophisticated rewards
+ In Q-learning, there are set environments or states
+ There are also possible actions that can respond to these states
+ In Q-learning, you want the machine to improve the quality of the outcome
+ This is represented with the letter Q
+ You might have a game like Space Invaders that requires you to shoot through aliens to eventually win the game
+ This has a more complex reward system
+ It's not just as simple as having your opponent miss the ball
+ In this case, you would start out with a quality of zero
+ Then you would have the machine learn which actions improve the conditions
+ Each time an action improved the state, the Q would go up from zero
+ The Q would go up based on the states and actions
+ This type of reinforcement learning is one of the most promising areas in machine learning
+ It allows the machine to go through endless simulations of actions and states until it finds the best strategy
+ In 2015, Google's Deep Mind project made the news when their AlphaGo program first beat an expert player in the game called Go
+ AlphaGo used a form of unsupervised learning
+ It learned primarily by observing professionals playing the game
+ Their newer program AlphaGo Zero relies primarily on Q-learning
+ It didn't have to watch the experts play the game
+ AlphaGo Zero simply went through the game and tried different actions as a way to change the state and win
+ Within hours, this Q-learning machine played Go at a level that humans can't understand
+ In fact, after just 70 hours of training, AlphaGo Zero beat the earlier version of AlphaGo in the first 100 tries
+ Reinforcement learning and specifically Q-learning allows machines to quickly grow beyond our understanding
+ It can help you skip the steps required in unsupervised learning
+ You don't need hours of observing and studying massive amounts of data
+
+
+
+
+
+
+Algorithms:
+1.
+- Decision trees:binary classification challenges with supervised machine learning
+ set up predictors and match them to some outcome
+management-friendly: show how the machine is making decisions by creating a graphical tree for presentation
+ eg: predict whether or not someone is likely to go to the beach
+  three predictors: weather, Weekend, Wind speed
+  two options, high or low
+  one outcome variable:Yash goes to the beach
+  a simple table with four columns or create the tree,
+ eg. Sky as the root node predictor,  split out decision node to the next level of the tree
+   show total number of possible outcomes in the training data In each of these decision nodes
+ 1. no leaf nodes when the decision node is Rainy
+  don't have to break down your decision tree any further since there's no other option
+ Once you create your decision trees, you want to have a clear path to a yes or no outcome
+  2. too much entropy: tree is getting too messy and it's taking too long to get to a yes or no answer
+  no usefulinformation with wind: two yes with high wind and one with low wind
+ solution: replace or drop the predictor
+ 
+ 2.
+ K nearest neighbour:
+ - In machine learning, one of the best ways to learn more about your data is by classifying it with what you already know
+ You can group together a bunch of data based on similar characteristics
+ Because you already know these characteristics, you can classify the data using supervised machine learning
+ A very common supervised machine learning algorithm for multiclass classification is k-Nearest Neighbor
+ This is an instance-based machine learning algorithm, or what's also called lazy learning
+ With lazy learning, the bulk of the computation happens right before you want to classify your data
+ The learning doesn't happen continuously
+ Instead, you run all your computation in one big instance
+ In a sense, you're saving up all your energy for one big splash
+ k-NN compares something you don't know to what you already have
+ pro: getting immediately rewarded for the size and quality of your training data
+ Con: takes a lot of computational power, so sometimes it's difficult to use k-NN on very large data sets
+eg.
+  trying to classify the unknown dog by looking for its nearest neighbor with some of the characteristics 
+ The closer the match, the more likely it was to be classified
+  	minimize the distance between the unknown dog and the known breeds
+ If the characteristics were closely matched, then there was a very short distance between the unknown dog and its nearest neighbor
+ Minimizing the distance is a key part of k-Nearest Neighbor
+ The closer you are to your nearest neighbors, the more likely you are to be accurate
+ The most common way to do this is through something called Euclidean distance
+ This is a pretty sophisticated mathematical formula that can help see the distance between your different data points
+ Now, imagine you had millions of dogs and you wanted to classify them based on their breed
+ 1. create two key characteristics (predictors: weight and hair length) on an X-Y axis diagram, help classify dogs that share the same breed. 
+ 2. put 1,000 classified dogs in our training set on the graph based on their weight and hair length
+ 3. take our unknown dog and put it in the same chart
+  it's not matched with another dog, but it has a bunch of close neighbors
+ a K of five: a circle around our unclassified dog and its five closest neighbors
+ 4. the shortert the distance of the other dogs, the more accurate the classification becomes
+  look at the five closest neighbors: three of them are Shepherds and two of them are Huskies
+ You can be somewhat confident to classify your unknown dog as a Shepherd
+ There's also a reasonable chance that it's a Husky
+ k-Nearest Neighbor is a very powerful machine learning algorithm commonly used in finance to look for the best stocks and even predict future performance
+
+
+
+3.- k-Means Clustering
+k-nearest neighbor is a supervised machine learning algorithm: classifying data based on what you already know
+ On the other hand, k-means clustering is an unsupervised machine learning algorithm
+ You'll use it to create clusters based on what your machine sees in the data
+ Think of it this way
+ Imagine we're back at the animal shelter in Chicago
+ The shelter had a large social room where all the dogs get together and play
+ The dogs acted like people
+ They had their group of friends and they chatted and hung out with each other
+ Each time they had a social hour, they would self-organize into different groups of friends
+ Now imagine that the shelter was closing and all the dogs were going to be distributed into three different shelters across the city
+ The organizers of the animal shelter got together and decided to make it easier on the dogs, they would cluster them based on these groups of friends
+ So the shelter decided to create three clusters
+ That means that the k in k-means equaled three because you want to divide the groups into three clusters
+ Now imagine that the machine learning algorithm got started
+ To start, the machine put a red, yellow, and blue color on three random dogs
+ Each color represented a potential cluster based on their social group
+ These will be your three centroid dogs
+ Now each of the centroid dogs would look at the mean distance between itself and all of the surrounding dogs
+ Then the machine would put the same color collar on the dogs that were closest to these centroid dogs
+ As you can imagine since these centroid dogs were selected randomly, there's a pretty good chance that you won't really have any good clusters
+ Maybe all three centroid dogs were in the same social group
+ If that happens then most of the dogs would have a very large distance between these three centroids
+ So the machine will try over and over again until it picks the best centroid dog
+ It might even do this one cluster at a time
+ At the end of each iteration, the machine learning algorithm checks the variance between each dog and the centroid
+ Once you have a good centroid dog then it's pretty straightforward to put unknown dogs into each cluster
+ If you put a new dog into the social area then you can tell which social group it ends up in by just measuring the distance from the centroid dog
+ Also keep in mind that the dogs themselves did not cluster into three groups
+ There might be five or six different social groups, but there are only three shelters so the machine learning algorithm has to do its best to create clusters that best represent the dogs' social grouping
+ You should also watch to make sure that you use k-means clustering if the dogs are predisposed to these social groups
+ If the dogs are jumping from group to group then it'll be difficult to form real clusters
+ This is sometimes called a high overlap of data
+ Another challenge with k-means is it can be very sensitive to outliers
+ So if you have a dog that's not really interested in hanging out with any of the other dogs, it will still be clustered into one of these three groups
+ So in a sense, the dog will be forced to find friends
+ Organizing dogs into three clusters for three different shelters is probably not a problem that you'll run into everyday, but k-means clustering is actually one of the most popular machine learning algorithms
+ One of the more interesting applications is when retailers use clustering to decide who gets promotions
+ They might create three clusters that they call loyal customers, somewhat loyal customers, and lowest priced shoppers
+ Then they'll create strategies to try and elevate somewhat loyal customers to loyal customers or they could just invite their loyal customers to participate in one of their programs
+ Many organizations are looking for better ways to cluster together their customers
+ If you can get all your loyal customers into one cluster then that can really improve your business
+
+
+
+- k-Means clustering and k-nearest neighbor are both instance-based or lazy learning
+ That means that you get all the answers in one big splash
+ If something changes in your data then you have to rerun the algorithm from scratch
+ This might make it difficult to scale these models because you're working with much more data at any one time
+ Sometimes you don't want instance-based machine learning algorithms
+ Instead, you'll want to see a continuous numerical relationship between different parts of your data
+ For that, you might use something like regression analysis
+ Regression analysis looks at the relationship between predictors and your outcome
+ Sometimes you'll hear predictors called input variables, independent variables, or even regressors
+ Machine learning regression algorithms usually work in a similar way
+ Once you have your training data, you make a prediction and then see how close you are to the outcome
+ Then you repeat over and over again and try to zoom in on the most accurate prediction of the outcome
+ When you have a pretty good result, you'll take this training data and see if it works with your test data
+ This is a supervised machine learning algorithm
+ You're taking the training data and labeling the correct output then you're using this labeled data with the test data
+ Linear regression is one of the most common types of machine learning algorithms
+ With linear regression, you'll want to create a straight line that shows the relationship between your predictor and the outcome
+ You'll want to see all the different data points closely gathered around the straight line
+ Then you can make the best prediction of your outcome
+ So let's think about how this might work
+ Imagine you're an owner of an ice cream shop
+ Over the last year, you've collected 20 days of sales data
+ Then you went out and purchased the weather data for those days
+ So with this training data, you create a simple x and y-axis diagram as a scatter plot
+ This is when you plot your data along different parts of your diagram
+ Along the y-axis, you list the daily sales
+ And along the x-axis, you put a temperature scale
+ Let's say it starts at 60 degrees and ends at 110 degrees so you plot all of your different data points on your diagram
+ Then you'll try to create a line of best fit
+ To do this, you create a line that splits your data
+ This is usually called the hyperplane
+ Sometimes you'll also hear this called the trend line
+ So you can see from our scatter plot diagram that there's a very clear trend line
+ The more the temperature goes up, the greater your ice cream sales
+ You can also see that there's a few times that you have data points that are well outside the trend line
+ This could be because there was a festival or maybe just a lot of people wanted ice cream on a cold day
+ If you have a lot of data points that are far away from the trend line then it will be much more difficult for you to predict your ice cream sales
+ As it stands, there aren't many outliers so you can use your linear regression to predict your sales
+ So let's look at a point in this diagram
+ Let's say that all this week, the weather forecast says it will be around 95 degrees
+ Now we can look at our hyperplane or trend line and try to find the corresponding ice cream sales
+ You'll see that you can expect to sell around $3,000
+ As you can imagine, not just ice cream shop owners are interested in using machine learning linear regression
+ In fact, if you have more data, it's usually easier to make an accurate trend line
+ One interesting about linear regression is that there are some debate about whether it's actually machine learning
+ There's some truth to it because if you think about it, the machine is not actually learning anything new about the data
+ It's just using the data to create a standard statistical model
+ It's less about learning and more about predicting
+ Either way, regression is a very popular way to try and predict future behavior
+ The key is to find the right predictors and look for some type of linear connection with the outcome
+
+
+- You've seen that supervised machine learning algorithms can classify your data
+ Unsupervised machine learning algorithms can cluster your data
+ Now let's look at an entirely different set of algorithms based on conditional probability
+ Say you're looking to see how one thing impacts the probability of another thing happening
+ The most popular algorithm for this type of analysis is called the Bayesian algorithm based on the Bayes' theory of statistics
+ Naive Bayes is one of the most popular Bayesian machine learning algorithms
+ It's called naive because it assumes that all of the predictors are independent from one another
+ Naive Bayes is mostly used for binary or multiclass classification
+ So let's go back to our animal shelter in Chicago
+ Imagine that we wanted to classify all the dogs in the shelter based on their different breeds
+ Remember that there are hundreds of different dog breeds
+ On top of that, most dogs would be a mixture of several breeds
+ Let's look at this problem using a naive Bayes machine learning algorithm
+ To start, let's create three classes of dog breeds
+ We'll use terrier, hounds, and sport dogs
+ Now, for each of these classes, we'll have three predictors
+ Let's use hair length, height, and weight
+ Remember that some of the predictors will be closely autocorrelated
+ A tall dog is more likely to be heavier
+ But naive Bayes considers each one of these predictors independently
+ Remember, that's why it's called naive
+ Once you have your classes and predictors set up, then the naive Bayes machine learning algorithm starts with something called class predictor probability
+ This is when it looks at each of the independent predictors and tries to create a probability that the dog belongs in each class
+ So let's see what happens when you're trying to identify an unknown dog
+ The first predictor you look at is hair length
+ The machine learning algorithm can check the probability of a dog with this hair length belonging to any of the three classes
+ It finds that a dog with this hair length has a 40% chance of being a terrier, a 10% chance of being a hound, and a 50% chance that it's a sport dog
+ The next thing you check is the unknown dog's height
+ Again, naive Bayes doesn't correlate the dog's hair length with the dog's height
+ It looks at this predictor independently and tries to calculate the probability that this unknown dog will belong to each class
+ So, again, it looks at the training data and finds that there's a 20% chance that it's a terrier, a 10% chance that it's a hound, and a 70% chance that it's a sport dog
+ The final thing you want to check is the unknown dog's weight
+ This might seem like a strange predictor because it's closely related to height
+ But remember, the naive Bayes is evaluating the probability of each predictor independently
+ It looks at the training data and finds there's a 10% chance it's a terrier, a 5% chance that it's a hound, and an 85% chance that it's a sport dog
+ So you now have this table with the unknown dog's class predictor probability
+ If you look at it, you can see that the dog is probably a hound
+ But remember, most machine learning problems are dealing with terabytes or even petabytes of dog data and is trying to classify millions of unknown dogs
+ So to classify your dog, you might want to use something called the weighted multiplication function
+ Since this is a weighted function, the first thing you want to do is create a weight
+ It's here you'll decide which one of your predictors is the most predictive
+ You can pick this weight by looking at the training data
+ You can also tweak it if it improves your accuracy
+ Here we'll use a weight of three for hair and two for weight and height
+ So for the weighted multiplication function, take the predictor and multiply it by your weight
+ When you add up the predictors for hair length, height, and weight, you can see that the second unknown dog is most likely a sport dog
+ It's less likely that it's a terrier and very unlikely that it's a hound
+
+
+
+
+
+
+data quality:
+tweak hyper-parameters and make better predictions.
+Bias: gap between your predicted value and the actual outcome.
+variance:when your predicted values are scattered all over the place
+high bias and a low variance: predictions are consistently wrong. 
+
+
+fit the data
+underfitting: create a simple model. This works for small training sets but it's inflexible when you're looking at larger data.
+overfitting: create a model that's flexible enough to work with the dataset but so complex it's difficult to understand. 
+
+eg:
+supervised machine learning and regression to try and create some trend lines to predict the value.
+underfitting: two few predictors:  square footage and location only
+1. a lot of variance(noise) in the data.
+2. a low variance but a high bias: a big ugly house and a big old house 
+=> create new predictors such as quality of view, modern appliances, or walkability
+=> difficult to see relationships between modern kitchens, views, and the location. 
+
+Signal: something that you can use to make accurate predictions while the 
+noise: natural variances in the data that might not offer any insights. 
+=> capture as much of the signal as you can while not getting too distracted by the noise in your data.
+
+
+
+Select the best Algorithm:
+labeled data: supervised learning
+labeled data helps understand both the input and the output. 
+e.g. create an application that helps you price your home then you'll need a bunch of labeled data. zip code, square footage, and number of bathrooms
+so that machine doesn't have to find it's own patterns
+
+unlabeled data: unsupervised learning
+let the machine create it's own clusters
+feed your machine all the data that you have on different homes. 
+Then the machine decides what clusters make the most sense. 
+Maybe the machine clustered together all the homes that have better walkability. 
+It might even be a criteria that's unknown. 
+Once you have the clusters, you'll be able to extract some meaning. 
+k-means clustering: massive amounts of unlabeled data
+regression, k-nearest neighbor or decision trees: a bunch of labeled data 
+look at the results and see which one had the highest level of accuracy
+ensemble modeling: create different ensembles of machine learning algorithms. 
+ways to create ensembles: bagging, boosting, and stacking
+1. Bagging is when you create several different versions of the machine learning algorithm. 
+    eg. create several different trees and see which one had the best results or average out the results if you're getting inconsistent outcomes
+2. Boosting is when you use several different machine learning algorithms to try and boost the accuracy of your results. 
+    eg: k-means clustering in combination with a decision tree. 
+        taking the leaves of the tree and then letting the machine decide if there's any interesting grouping. (an example of semi-supervised learning.)
+3. Stacking is when you use several different machine learning algorithms and stack them to improve the accuracy.
+    eg: stack k-nearest neighbor on top of naive bayes. Each one might just add .01% but over time that can be significant improvement. 
+    experiment to find the best one or work with several different tools as a way to improve accuracy.
+
+
+challenges:
+
+1. ask interesting questions, understand business needs 
+2. keep training data separate from testing data
+  training data: the small amount of data that you set aside to build your model in supervised learning
+3. not spend too much time choosing the right algorithm
+        
+
